@@ -105,6 +105,24 @@ li {
   background: #ccc;
 }
 
+
+
+/*style slide-show*/
+
 #slide-show {
 	margin-top: 46px;
+	width: 100%;
+	padding: 25% 0;
+	background: #ccc url("../images/slide-total-3.jpg") no-repeat 0 0;
+	background-size: cover;
+	animation: slide 12s infinite;
+}
+
+@keyframes slide {
+	0% {background-position: 0% 0%;}
+	33.33% {background-position: 0% 0%;;}
+	33.34% {background-position: 50% 50%;}
+	66.67% {background-position: 50% 50%;}
+	66.68% {background-position: 100% 100%;}
+	100% {background-position: 100% 100%;}
 }
