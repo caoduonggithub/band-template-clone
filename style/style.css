@@ -339,3 +339,35 @@ button[type = submit]:hover {
 	color: #000;
   background-color: #ccc
 }
+
+
+
+
+/*style footer*/
+
+#footer {
+	color: #000;
+  background-color: #f1f1f1
+}
+
+#city-map {
+	filter: grayscale(50%);
+	vertical-align: middle;
+}
+
+#links {
+	padding: 64px 16px;
+	opacity: 0.6;
+	text-align: center;
+	font-size: 24px;
+}
+
+#links::after {
+	content: " ";
+	clear: both;
+	display: table;
+}
+
+#links > i:hover {
+  opacity: 0.6;
+}
