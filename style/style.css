@@ -5,6 +5,8 @@
 
 body {
 	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+	font-size: 15px;
 }
 
 li {
@@ -52,8 +54,6 @@ li {
 #nav-bar-links > li > a {
 	display: block;
 	padding: 12px 24px;
-	font-size: 15px;
-	line-height: 1.5;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
@@ -69,8 +69,6 @@ li {
 	display: block;
 	float: right;
 	padding: 12px 24px;
-	font-size: 15px;
-	line-height: 1.5;
 	text-align: center;
 	color: #fff;
 }
@@ -92,8 +90,6 @@ li {
 #toggle-links > li > a {
 	display: block;
 	padding: 12px 24px;
-	font-size: 15px;
-	line-height: 1.5;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: left;
@@ -125,4 +121,62 @@ li {
 	66.67% {background-position: 50% 50%;}
 	66.68% {background-position: 100% 100%;}
 	100% {background-position: 100% 100%;}
+}
+
+
+
+
+/*style content*/
+
+h2 {
+	margin: 10px 0;
+	font-size: 30px;
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-weight: 400;
+	letter-spacing: 4px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 + p {
+	font-style: italic;
+	text-align: center;
+}
+
+h2 + p::first-letter {
+	text-transform: uppercase;
+}
+
+#about-band, #about-tour, #contact {
+	padding: 64px 16px;
+}
+
+
+
+/*style about-band*/
+
+#about-band > p:nth-child(3) {
+	margin: 15px 0;
+}
+
+#list-images {
+	padding: 32px 0;
+}
+
+#list-images > li {
+	text-align: center;
+}
+
+#list-images > li > p {
+	margin: 15px 0;
+}
+
+#list-images > li > p::first-letter {
+  text-transform: uppercase;
+}
+
+#list-images > li > img {
+	margin-bottom: 16px;
+	border-radius: 4px;
+	vertical-align: middle;
 }
