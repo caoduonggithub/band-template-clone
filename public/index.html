@@ -80,7 +80,7 @@
           <p>New York</p>
           <p>Fri 27 Nov 2016</p>
           <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-          <button>Buy Tickets</button>
+          <button class="buy-ticket">Buy Tickets</button>
         </div>
       </li>
 
@@ -91,7 +91,7 @@
           <p>Paris</p>
           <p>Sat 28 Nov 2016</p>
           <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-          <button>Buy Tickets</button>
+          <button class="buy-ticket">Buy Tickets</button>
         </div>
       </li>
 
@@ -102,10 +102,49 @@
           <p>San Francisco</p>
           <p>Sun 29 Nov 2016</p>
           <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-          <button>Buy Tickets</button>
+          <button class="buy-ticket">Buy Tickets</button>
         </div>
       </li>
     </ul>
+  </div>
+
+  <div id="ticket-modal">
+    <div>
+      <div id="ticket-header">
+      <h2>
+        <i class="fas fa-suitcase"></i>
+        Tickets
+      </h2>
+      <i class="fas fa-times close-ticket"></i>
+    </div>
+
+    <div id="ticket-content">
+      <form action="#" method="post">
+        <p>
+          <i class="fas fa-shopping-cart"></i>
+          <label for="">Tickets, $15 per persion</label> 
+        </p>
+        <input type="text" name="numOfTickets" placeholder="How many?" required="required">
+
+        <p>
+          <i class="fas fa-user"></i>
+          <label for="">Send To</label> 
+        </p>
+        <input type="email" name="ticketsEmail" placeholder="Enter email" required="required">
+
+        <button type="submit" id="pay-ticket">pay <i class="fas fa-check"></i>
+        </button>
+      </form>
+
+      <button class="close-ticket">Close <i class="fas fa-times"></i>
+      </button>
+
+      <p>
+        Need 
+        <a href="#" id="need-helf">helf?</a>
+      </p>
+    </div>
+    </div>
   </div>
 
   <div id="contact">
@@ -128,9 +167,9 @@
     </ul>
 
     <form action="#" method="post">
-      <input type="text" name="name" placeholder="Name">
-      <input type="email" name="email" placeholder="Email">
-      <input type="text" name="message" placeholder="Message">
+      <input type="text" name="name" placeholder="Name" required="required">
+      <input type="email" name="email" placeholder="Email" required="required">
+      <input type="text" name="message" placeholder="Message" required="required">
       <button type="submit">send</button>
     </form>
   </div>
