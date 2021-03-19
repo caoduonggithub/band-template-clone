@@ -310,7 +310,7 @@ h2 + p::first-letter {
 
 #ticket-modal > div {
 	padding: 0 10px;
-	padding-bottom: 60px;
+	margin-bottom: 60px;
 }
 
 #ticket-header {
