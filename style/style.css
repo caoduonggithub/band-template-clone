@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -319,13 +320,23 @@ h2 + p::first-letter {
   z-index: 1;
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   background: rgba(0,0,0,0.4);
 }
 
-#ticket-modal > div {
+#ticket-modal-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
   padding: 0 10px;
-  margin-bottom: 60px;
+  animation: showTicketModal 0.4s forwards;
+}
+
+@keyframes showTicketModal {
+  0% {top: -100%;}
+  100% {top: 50px;}
 }
 
 #ticket-header {
@@ -491,7 +502,7 @@ button[type = submit]:hover {
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
 
 /*style nav-bar*/ 
 
@@ -589,3 +600,94 @@ button[type = submit]:hover {
 
 /*style slide-show*/
 /*use javascript to style*/
+
+
+
+/*style about-band*/
+
+#list-images::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+#list-images > li{
+  float: left;
+  width: calc(100% / 3);
+}
+
+
+
+/*style about-tour*/
+
+#about-tour {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#about-tour > ul:first-of-type {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#concert-place::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.concert-place {
+  float: left;
+  width: calc(100% / 3);
+  padding: 0 8px;
+}
+
+
+
+/*style ticket-modal */
+
+#ticket-modal-content {
+  left: calc(50% - 250px);
+  width: 500px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+
+/*style contact*/
+
+#contact::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+#band-contact {
+  float: left;
+  width: 50%;
+  padding-top: 0;
+}
+
+#band-contact + div {
+  float: left;
+  width: 50%;
+}
+
+#inp-name, #inp-email {
+  float: left;
+  width: 50%;
+}
+
+#inp-email {
+  padding-left: 8px;
+}
+
+#inp-name {
+  padding-right: 8px;
+}
+
+input[name = "name"], input[name = "email"] {
+  display: block;
+}
