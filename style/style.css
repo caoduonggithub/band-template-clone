@@ -144,6 +144,13 @@ li {
 
 /*style content*/
 
+/*style about-band*/
+
+#about-band, #about-tour > div, #contact {
+  max-width: 800px;
+  margin: auto;
+}
+
 h2 {
   margin: 10px 0;
   font-size: 30px;
@@ -153,7 +160,7 @@ h2 {
   text-align: center;
 }
 
-#about-band > h2, #about-tour > h2, #contact > h2 {
+#about-band > h2, #about-tour > div > h2, #contact > h2 {
   text-transform: uppercase;
 }
 
@@ -170,7 +177,7 @@ h2 + p::first-letter {
   padding: 64px 16px;
 }
 
-#about-band > p:nth-child(2), #about-tour > p:nth-child(2), #contact > p:nth-child(2) {
+#about-band > p:nth-child(2), #about-tour > div > p:nth-child(2), #contact > p:nth-child(2) {
   text-align: center;
   opacity: 0.6;
   margin: 15px 0;
@@ -211,26 +218,26 @@ h2 + p::first-letter {
   color: #fff;
 }
 
-#about-tour > ul:nth-child(4) {
+#about-tour > div > ul:nth-child(4) {
   border: 1px solid #ccc;
   color: #757575;
   background: #fff;
 }
 
-#about-tour > ul:nth-child(4) > li {
+#about-tour > div > ul:nth-child(4) > li {
   padding: 8px 16px;
   border-bottom: 1px solid #ddd;
 }
 
-#about-tour > ul:nth-child(4) > li:last-child {
+#about-tour > div > ul:nth-child(4) > li:last-child {
   border-bottom: none;
 }
 
-#about-tour > ul:nth-child(4) > li > span {
+#about-tour > div > ul:nth-child(4) > li > span {
   display: inline-block;
 }
 
-#about-tour > ul:nth-child(4) > li > span::first-letter {
+#about-tour > div > ul:nth-child(4) > li > span::first-letter {
   text-transform: uppercase;
 }
 
@@ -252,7 +259,7 @@ h2 + p::first-letter {
   text-align: center;
 }
 
-#about-tour > ul:nth-child(5) {
+#about-tour > div > ul:nth-child(5) {
   padding: 32px 0;
 }
 
@@ -263,6 +270,10 @@ h2 + p::first-letter {
 .concert-place > img {
   vertical-align: middle;
   background: #ccc;
+}
+
+.concert-place > img:hover {
+  opacity: 0.6;
 }
 
 .concert-place-details {
@@ -327,7 +338,6 @@ h2 + p::first-letter {
 #ticket-modal-content {
   position: absolute;
   width: 100%;
-  height: 100%;
   top: -100%;
   left: 0;
   padding: 0 10px;
@@ -383,7 +393,7 @@ i[class = "fas fa-times close-ticket"]:hover {
   cursor: pointer;
 }
 
-#pay-ticket:hover {
+#pay-ticket:hover, button[class = "close-ticket"]:hover {
   color: #000;
   background-color: #ccc;
 }
@@ -625,7 +635,7 @@ button[type = submit]:hover {
   padding-right: 8px;
 }
 
-#about-tour > ul:first-of-type {
+#about-tour > div > ul:first-of-type {
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -691,3 +701,37 @@ button[type = submit]:hover {
 input[name = "name"], input[name = "email"] {
   display: block;
 }
+
+
+
+/*style min-width: 769px*/
+
+@media only screen and (min-width: 769px) {
+
+/*style ticket-modal*/
+
+#ticket-modal-content {
+  width: 600px;
+  left: calc(50% - 300px);
+}
+
+} 
+
+/*style min-width: 993px*/
+
+@media only screen and (min-width: 993px) {
+
+/*style ticket-modal*/
+
+#ticket-modal-content {
+  width: 900px;
+  left: calc(50% - 450px);
+  animation: showTicketModalNew 0.4s forwards;
+}
+
+@keyframes showTicketModalNew {
+  0% {top: -100%;}
+  100% {top: 100px;}
+}
+
+} 
