@@ -3,6 +3,7 @@ let toggleLinks = document.getElementById("toggle-links");
 let buyTicket = document.getElementsByClassName("buy-ticket");
 let ticketModal = document.getElementById("ticket-modal");
 let closeTicket = document.getElementsByClassName("close-ticket");
+let slideShow = document.getElementById("slide-show");
 let slideLa = document.getElementById("slide-la");
 let slideNy = document.getElementById("slide-ny");
 let slideChicago = document.getElementById("slide-chicago");
@@ -58,15 +59,18 @@ function showSlideContent() {
   slideLa.style.display = "block";
   slideNy.style.display = "none";
   slideChicago.style.display = "none";
+  slideShow.style.backgroundPosition = "0 0";
   setTimeout(function() {
     slideLa.style.display = "none";
     slideNy.style.display = "block";
     slideChicago.style.display = "none";
+    slideShow.style.backgroundPosition  = "50% 50%";
   }, 4000);
   setTimeout(function() {
     slideLa.style.display = "none";
     slideNy.style.display = "none";
     slideChicago.style.display = "block";
+    slideShow.style.backgroundPosition  = "100% 100%";
   }, 8000);
   setTimeout(showSlideContent, 12000);
 }
