@@ -107,6 +107,7 @@ li {
 /*style slide-show*/
 
 #slide-show {
+  position: relative;
   margin-top: 46px;
   width: 100%;
   padding: 25% 0;
@@ -117,12 +118,35 @@ li {
 
 @keyframes slide {
   0% {background-position: 0% 0%;}
-  33.33% {background-position: 0% 0%;;}
+  33.33% {background-position: 0% 0%;}
   33.34% {background-position: 50% 50%;}
   66.67% {background-position: 50% 50%;}
   66.68% {background-position: 100% 100%;}
   100% {background-position: 100% 100%;}
 }
+
+#slide-la, #slide-ny, #slide-chicago {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 32px 16px;
+  color: #fff;
+  text-align: center;
+}
+
+#slide-la > h3, #slide-ny > h3, #slide-chicago > h3 {
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+#slide-la > p, #slide-ny > p, #slide-chicago > p {
+  font-weight: bold;
+}
+
 
 
 
@@ -570,3 +594,9 @@ button[type = submit]:hover {
 .more-list:hover {
   background: #ccc;
 }
+
+
+
+/*style slide-show*/
+
+/*use javascript to style*/
