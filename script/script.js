@@ -3,26 +3,38 @@ let toggleLinks = document.getElementById("toggle-links");
 let buyTicket = document.getElementsByClassName("buy-ticket");
 let ticketModal = document.getElementById("ticket-modal");
 let closeTicket = document.getElementsByClassName("close-ticket");
+let slideLa = document.getElementById("slide-la");
+let slideNy = document.getElementById("slide-ny");
+let slideChicago = document.getElementById("slide-chicago");
 
-
-
+// toggle links
 toggleMenu.onclick = showHideLinks;
 toggleLinks.onclick = showHideLinks;
+
+// show ticket-modal
 for(let i = 0; i < buyTicket.length; i++) {
-	buyTicket[i].onclick = function() {
-		showTicketModal();
-	}
+  buyTicket[i].onclick = function() {
+    showTicketModal();
+  }
 };
+
+// close ticket-modal when click button Close, button X
 for(let i = 0; i < closeTicket.length; i++) {
-	closeTicket[i].onclick = function() {
-		closeTicketModal();
-	}
+  closeTicket[i].onclick = function() {
+    closeTicketModal();
+  }
 };
+
+// close ticket-modal when click outside ticket-modal
 window.onclick = function(event) {
   if (event.target == ticketModal) {
     ticketModal.style.display = "none";
   }
 }
+
+// show slide-show's content responding time
+
+showSlideContent();
 
 
 
@@ -42,3 +54,19 @@ function closeTicketModal() {
   ticketModal.style.display = "none";
 }
 
+function showSlideContent() {
+  slideLa.style.display = "block";
+  slideNy.style.display = "none";
+  slideChicago.style.display = "none";
+  setTimeout(function() {
+    slideLa.style.display = "none";
+    slideNy.style.display = "block";
+    slideChicago.style.display = "none";
+  }, 4000);
+  setTimeout(function() {
+    slideLa.style.display = "none";
+    slideNy.style.display = "none";
+    slideChicago.style.display = "block";
+  }, 8000);
+  setTimeout(showSlideContent, 12000);
+}
