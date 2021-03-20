@@ -95,7 +95,8 @@
         <span class="remain">3</span>
       </li>
     </ul>
-    <ul>
+
+    <ul id="concert-place">
       <li class="concert-place">
         <img src="../images/newyork.jpg" alt="new york" style="width:100%">
 
@@ -132,7 +133,7 @@
   </div>
 
   <div id="ticket-modal">
-    <div>
+    <div id="ticket-modal-content">
       <div id="ticket-header">
       <h2>
         <i class="fas fa-suitcase"></i>
@@ -189,12 +190,14 @@
       </li>
     </ul>
 
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Name" required="required">
-      <input type="email" name="email" placeholder="Email" required="required">
-      <input type="text" name="message" placeholder="Message" required="required">
-      <button type="submit">send</button>
-    </form>
+    <div>
+      <form action="#" method="post">
+        <div id="inp-name"><input type="text" name="name" placeholder="Name" required="required"></div>
+        <div id="inp-email"><input type="email" name="email" placeholder="Email" required="required"></div>
+        <input type="text" name="message" placeholder="Message" required="required">
+        <button type="submit">send</button>
+      </form>
+    </div>
   </div>
 
   <div id="footer">
